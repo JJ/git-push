@@ -22,9 +22,11 @@ export default {
 	textTransform: 'none',
 	fontFamily: opensans,
     },
+    code: {
+      	fontSize: '1.5em',
+    },
     prism: {
 	style: okaidia,
-	fontSize: '2em',
 	languages: {
 	    bash: prismBash
 	}
