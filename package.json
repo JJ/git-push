@@ -1,0 +1,27 @@
+{
+  "name": "git-push",
+  "version": "1.0.0",
+  "description": "Presentación para WPConf granada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "mdx-deck git-push.mdx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJ/git-push.git"
+  },
+  "keywords": [
+    "Git",
+    "GitHub"
+  ],
+  "author": "JJ Merelo",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JJ/git-push/issues"
+  },
+  "homepage": "https://github.com/JJ/git-push#readme",
+  "devDependencies": {
+    "mdx-deck": "^1.7.10"
+  }
+}
