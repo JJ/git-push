@@ -1,3 +1,7 @@
 {
-  "version": 1
+  "version": 2,
+  "builds": [
+    { "src": "git-push.mdx", "use": "@now/mdx-deck" }
+  ]
 }
+
