@@ -1,5 +1,6 @@
 import { Head, Image, Appear } from 'mdx-deck'
 import { SplitRight, Split, Horizontal, FullScreenCode } from 'mdx-deck/layouts'
+import SplitHorizontal from './SplitHorizontal'
 
 <Head>
   <title>Git! Push</title>
@@ -160,15 +161,15 @@ git pull # Evitando conflictos
 git push
 ```
 ---
-export default Split
+export default SplitHorizontal
+
+![Copias de Aprende Git](https://farm5.staticflickr.com/4363/36731862511_e79123d715_k_d.jpg)
 
 # Clonando Trellis (sin profundidad)
 
 ```bash
 git clone --depth=1 git@github.com:roots/trellis.git
 ```
-
-![Copias de Aprende Git](https://farm5.staticflickr.com/4363/36731862511_e79123d715_k_d.jpg)
 
 ```notes
 Se trata de un *shallow clone*
