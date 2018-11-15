@@ -1,6 +1,7 @@
 import { Head, Image, Appear } from 'mdx-deck'
 import { SplitRight, Split, Horizontal, FullScreenCode } from 'mdx-deck/layouts'
 import SplitHorizontal from './SplitHorizontal'
+import { CodeSurfer } from "mdx-deck-code-surfer"
 
 <Head>
   <title>Git! Push</title>
@@ -184,4 +185,19 @@ queramos. También empezamos a ver la naturaleza distribuida de git,
 manejando dos remotes, el original que se suele llamar *upstream*
 ```
 
+---
 
+<CodeSurfer
+  title="Modificando YAML"
+  code={require("!raw-loader!examples/vagrant.default.yml")}
+  lang="yaml"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { notes: "Cambiamos la máquina virtual a Ubuntu 18.04"},
+    { lines: [5], notes: "Alterando vagrant_box" },
+    { lines: [6], notes: "También la versión" },
+  ]}
+/>
+
+---

@@ -22,6 +22,11 @@
   },
   "homepage": "https://github.com/JJ/git-push#readme",
   "devDependencies": {
-    "mdx-deck": "^1.7.10"
+    "mdx-deck": "^1.7.10",
+    "mdx-deck-code-surfer": "^0.5.3",
+    "raw-loader": "^0.5.1"
+  },
+  "dependencies": {
+    "punycode": "^2.1.1"
   }
 }
