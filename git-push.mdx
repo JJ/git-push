@@ -1,5 +1,5 @@
 import { Head, Image, Appear } from 'mdx-deck'
-import { SplitRight, Split } from 'mdx-deck/layouts'
+import { SplitRight, Split, Horizontal, FullScreenCode } from 'mdx-deck/layouts'
 
 <Head>
   <title>Git! Push</title>
@@ -66,3 +66,116 @@ export default SplitRight
 # Con un sistema de gestión de versiones encima
 
 ![Como este piedro](https://farm9.staticflickr.com/8601/16187820372_6eb950631c_k_d.jpg)
+
+---
+export default SplitRight
+
+![La gaviota está en la rama máster](https://farm5.staticflickr.com/4877/30950194657_c02e71136c_h_d.jpg)
+
+# Distribuido
+
+```notes
+El que sea distribuido permite que se pueda trabajar y hacer `push` a
+repos remotos, y es lo que lo ha convertido en una herramienta de
+despliegue
+```
+---
+export default SplitRight
+
+![Engranaje y cara](https://farm9.staticflickr.com/8623/16133974149_402bdb3f06_b_d.jpg)
+
+# Con un sistema de eventos
+
+```notes
+Este sistema de eventos o *ganchos* sirve para lanzar acciones cada
+vez que sucede algo, y permite regular flujos de trabajo.
+```
+---
+export default Split
+
+# *filesystem* direccionado por contenido tiene:
+
+![Mecanismo del reloj](https://farm2.staticflickr.com/1438/1240116506_ae3ada3a4b_b_d.jpg)
+---
+export default SplitRight
+
+# *Blobs*
+
+![Medusas](https://farm2.staticflickr.com/1888/43736920854_cd8bad7158_k_d.jpg)
+---
+export default Split
+
+# *Trees*
+
+![Palmeras en Santa Mónica](https://farm2.staticflickr.com/1858/30580425888_3cda035fe2_k_d.jpg)
+
+---
+export default Split
+
+# Y un sistema de gestión de fuentes tiene:
+
+![Fuente de las Granadas con HDR excesivo](https://farm1.staticflickr.com/172/443895859_7075396f86_o_d.jpg)
+
+---
+export default SplitRight
+
+![Compromiso](https://farm8.staticflickr.com/7214/7018457543_5ce0fe9625_o_d.jpg)
+
+# * Commits * 
+
+---
+export default Split
+
+![Name tag](https://farm2.staticflickr.com/1484/25154592685_f6632618ed_o_d.jpg)
+
+# * Tags * 
+
+```notes
+Los objetos tipo Tag apuntan a un commit en una referencia inmutable https://git-scm.com/book/en/v2/Git-Internals-Git-References
+```
+
+---
+export default SplitRight
+
+# Aloja repos en GitHub, Bitbucket o Gitlab
+
+![Hotel Niza en Turín](https://farm6.staticflickr.com/5104/5681450206_011f887c35_b_d.jpg)
+
+```notes
+Cada uno tiene sus ventajas y sus inconvenientes, aunque sin duda el
+más popular para proyectos libres es GitHub. Si no es libre, Bitbucket
+te permite una cierta cantidad de repos privados, igual que
+GitLab. GitHub tiene muchas más integraciones que el resto, pero en
+general es una elección personal o, por supuesto, corporativa
+```
+
+---
+export default FullScreenCode
+
+```bash
+git clone <URL con git o https>
+git add <nuevo fichero>
+git commit -m "Explico el cambio"
+git pull # Evitando conflictos
+git push
+```
+---
+export default Split
+
+# Clonando Trellis (sin profundidad)
+
+```bash
+git clone --depth=1 git@github.com:roots/trellis.git
+```
+
+![Copias de Aprende Git](https://farm5.staticflickr.com/4363/36731862511_e79123d715_k_d.jpg)
+
+```notes
+Se trata de un *shallow clone*
+https://stackoverflow.com/questions/23708231/git-shallow-clone-clone-depth-misses-remote-branches
+Descarga commits hasta un máximo de uno, es decir, el estado del repo
+en el último commit y ya está. No puedes consultar la historia, por
+ejemplo
+```
+
+
