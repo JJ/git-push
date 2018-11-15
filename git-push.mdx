@@ -161,14 +161,17 @@ git pull # Evitando conflictos
 git push
 ```
 ---
-export default SplitHorizontal
-
-![Copias de Aprende Git](https://farm5.staticflickr.com/4363/36731862511_e79123d715_k_d.jpg)
-
-# Clonando Trellis (sin profundidad)
+# Clonando Trellis
 
 ```bash
+git clone git@github.com:JJ/trellis-test.git
 git clone --depth=1 git@github.com:roots/trellis.git
+rm -rf trellis/.git # Elimina el repo de git
+git add trellis
+git commit -am "Descarga última versión trellis"
+git tag -a v1 -m "Versión original"
+git push --tags
+git push origin master
 ```
 
 ```notes
@@ -176,7 +179,9 @@ Se trata de un *shallow clone*
 https://stackoverflow.com/questions/23708231/git-shallow-clone-clone-depth-misses-remote-branches
 Descarga commits hasta un máximo de uno, es decir, el estado del repo
 en el último commit y ya está. No puedes consultar la historia, por
-ejemplo
+ejemplo. También ponemos un tag para volver aquí cuando
+queramos. También empezamos a ver la naturaleza distribuida de git,
+manejando dos remotes, el original que se suele llamar *upstream*
 ```
 
 
