@@ -1,6 +1,5 @@
 import { Head, Image, Appear } from 'mdx-deck'
 import { SplitRight, Split, Horizontal, FullScreenCode } from 'mdx-deck/layouts'
-import SplitHorizontal from './SplitHorizontal'
 import { CodeSurfer } from "mdx-deck-code-surfer"
 
 <Head>
@@ -150,7 +149,6 @@ te permite una cierta cantidad de repos privados, igual que
 GitLab. GitHub tiene muchas más integraciones que el resto, pero en
 general es una elección personal o, por supuesto, corporativa
 ```
-
 ---
 export default FullScreenCode
 
@@ -161,19 +159,21 @@ git commit -m "Explico el cambio"
 git pull # Evitando conflictos
 git push
 ```
----
-# Clonando Trellis
 
-```bash
-git clone git@github.com:JJ/trellis-test.git
-git clone --depth=1 git@github.com:roots/trellis.git
-rm -rf trellis/.git # Elimina el repo de git
-git add trellis
-git commit -am "Descarga última versión trellis"
-git tag -a v1 -m "Versión original"
-git push --tags
-git push origin master
-```
+---
+<CodeSurfer
+  title="Clonación de Trellis en nuestro repo"
+  code={require("!raw-loader!examples/git-inicial.sh")}
+  lang="bash"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { notes: "Creando la configuración inicial"},
+    { lines: [2,3], notes: "Clona Trellis en un repo" },
+    { lines: [4,5], notes: "Añade a nuestro repo" },
+    { lines: [6,7], notes: "Crea un tag y lo sube a GitHub" },	
+  ]}
+/>
 
 ```notes
 Se trata de un *shallow clone*
