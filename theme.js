@@ -3,6 +3,7 @@ import { future } from 'mdx-deck/themes'
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia'
 import prismBash from 'react-syntax-highlighter/languages/prism/bash'
 import prismYaml from 'react-syntax-highlighter/languages/prism/yaml'
+import prismPerl from 'react-syntax-highlighter/languages/prism/perl'
 
 const monospace = 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace'
 const h1font = "Archivo, sans-serif"
@@ -28,7 +29,8 @@ export default {
 	style: okaidia,
 	languages: {
 	  bash: prismBash,
-          yaml: prismYaml
+          yaml: prismYaml,
+          perl: prismPerl,
 	}
     }
     

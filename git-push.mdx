@@ -214,6 +214,7 @@ forma de comunicarse con la comunidad de software libre
 ![Contribuciones al sage starter theme](img/issues.png)
 ---
 
+
 <CodeSurfer
   title="Modificando YAML"
   code={require("!raw-loader!examples/vagrant.default.yml")}
@@ -228,9 +229,62 @@ forma de comunicarse con la comunidad de software libre
 />
 
 ---
+export default Split
 
-# Los mensajes de commit 
+# Cuida los mensajes de commit
+
+![Mensaje desconcertante](https://farm5.staticflickr.com/4815/45909245751_f99508b781_b_d.jpg)
+
+```notes
+Los mensajes deben ser predicados cuyo sujeto es el cambio que has
+hecho. Los cambios deben ser atómicos
+```
 ---
+
+# Y trabaja siempre contra una tarea
+
+```bash
+git commit -am "Testea con más memoria Ubuntu refs #1"
+git push
+```
+
+![Issue referenciado](img/refs-issue.png)
+
+---
+
+# Comprobando issues
+
+```perl
+use Path::Tiny;
+
+my $msg_file = shift;
+my $msg = path($msg_file)->slurp;
+my @issues = ($msg =~ /\#(\d+)/g);
+exit(1) if (!@issues );
+my $repo_uri = `git config --get remote.origin.url`; # ← URL del repo
+my ($user,$repo) = ($repo_uri =~ /(\w+)\/([^.]+)/);
+for my $i (@issues) {
+  my $issue = `wget -q -O - https://github.com/$user/$repo/issues/$i`;
+  unless ($issue) {
+    say "✘ Commit incorrecto, issue #$i no existe";
+    exit(1);                                         # ← Sale si no cumple
+  }
+}
+```
+
+---
+export default Split
+
+![Corrigiendo con piedra encima](img/amend.png)
+
+# Corrigiendo
+
+```bash
+git commit --amend
+```
+
+---
+
 export default SplitRight
 
 ![Busca la camiseta del Madrid](https://farm5.staticflickr.com/4871/44990427415_2827512257_h_d.jpg)
@@ -240,3 +294,5 @@ export default SplitRight
 ```bash
 git grep password
 ```
+
+---
