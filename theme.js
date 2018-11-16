@@ -14,17 +14,17 @@ export default {
 	...future,
     font: h1font, h2font,
     h1: {
-	fontSize: '4em',
+	fontSize: '3.5em',
 	textTransform: 'none',
 	fontFamily: h1font
     },
     h2: {
-	fontSize: '3em',
+	fontSize: '2.75em',
 	textTransform: 'none',
 	fontFamily: h2font,
     },
     code: {
-      	fontSize: '1.5em',
+      	fontSize: '1.1em',
     },
     prism: {
 	style: okaidia,

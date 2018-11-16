@@ -261,7 +261,7 @@ git push
 
 ---
 
-# Comprobando issues
+# Comprobando issues: un *hook* 
 
 ```perl
 use Path::Tiny;
@@ -279,6 +279,14 @@ for my $i (@issues) {
     exit(1);                                         # ← Sale si no cumple
   }
 }
+```
+
+```notes
+Algunos plugins como GitHub updater permiten crear hooks directamente
+desde él:
+https://medium.com/@limikael/continuous-integration-for-wordpress-d152ec4852e5. Lo
+que ocurre es que sólo va a afectar a lo que se desarrolle dentro del
+mismo WP, y no a otras cosas auxiliares como lo que se haga en Trellis
 ```
 
 ---
@@ -367,3 +375,61 @@ https://roots.io/trellis/docs/vault/
 ```
 
 ---
+# O trabajando con `composer`
+
+```bash
+# Ignore wp-config.php and .htaccess
+wp-config.php
+.htaccess
+
+# Ignore the wp-content directory
+/wp-content
+```
+
+```notes
+Composer es otra alternativa para trabajar con git, y en esta serie de
+artículos: https://deliciousbrains.com/storing-wordpress-in-git/
+explican como usarlo. Permite trabajar con las dependencias y usar la
+línea de órdenes de WP para gestionarlo todo.
+```
+
+---
+# Integrando continuamente
+
+```yaml
+language: php
+php:
+  - 7.2
+  - 7.1
+env:
+  - WP_VERSION=latest
+before_script:
+  - composer self-update
+  - composer install -o --prefer-dist --no-interaction
+  - bash tests/bin/install-wp.sh $WP_VERSION
+script: vendor/bin/phpunit
+```
+
+```notes
+CI de https://carlalexander.ca/continuous-integration-wordpress/
+Otros servicios como Buddy ya integran la prueba de WordPress:
+https://buddy.works/guides/how-introduce-continuous-deployment-to-wordpress 
+
+```
+
+---
+
+# ¿Cómo fluirá `git`?
+
+![Fluyendo el Danubio no azul](https://farm9.staticflickr.com/8252/29175359022_a09f2d8a08_k_d.jpg)
+
+```notes
+Hay muchos patrones de trabajo de git soportados, en algunos casos,
+por herramientas diversas
+https://www.codingblocks.net/podcast/comparing-git-workflows/
+
+También este:
+https://www.atlassian.com/git/tutorials/comparing-workflows
+En general, manteniendo una serie de tareas claras se evitan los
+conflictos y usando integración continua se evitan errores. 
+```
