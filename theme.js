@@ -4,6 +4,7 @@ import okaidia from 'react-syntax-highlighter/styles/prism/okaidia'
 import prismBash from 'react-syntax-highlighter/languages/prism/bash'
 import prismYaml from 'react-syntax-highlighter/languages/prism/yaml'
 import prismPerl from 'react-syntax-highlighter/languages/prism/perl'
+import prismIni from 'react-syntax-highlighter/languages/prism/ini'
 
 const monospace = 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace'
 const h1font = "Archivo, sans-serif"
@@ -31,6 +32,7 @@ export default {
 	  bash: prismBash,
           yaml: prismYaml,
           perl: prismPerl,
+          perl: prismIni,
 	}
     }
     

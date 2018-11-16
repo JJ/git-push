@@ -284,7 +284,37 @@ git commit --amend
 ```
 
 ---
+export default Split
 
+![Grabando](https://farm5.staticflickr.com/4837/30971819987_26da5b9af7_k_d.jpg)
+
+# Sucede a menudo
+
+```bash
+git config --global alias.jo 'commit --amend'
+git jo
+```
+---
+
+# Recordando todo: 
+
+`~/.gitconfig`
+
+```ini
+[user]
+	email = jjmerelo@gmail.com
+	name = JJ Merelo
+[push]
+	default = matching
+[core]
+	editor = emacs
+[rerere]
+	enabled = true
+[alias]
+	jo = commit --amend
+```
+
+---
 export default SplitRight
 
 ![Busca la camiseta del Madrid](https://farm5.staticflickr.com/4871/44990427415_2827512257_h_d.jpg)
@@ -295,4 +325,34 @@ export default SplitRight
 git grep password
 ```
 
+```notes
+Aparece en demasiado sitios, así que habrá que ocultarlo. Una gestión
+segura de API keys y passwords incluye usar de forma hábil el
+.gitignore
+```
+
 ---
+# `.gitignore` para la seguridad
+
+```bash
+cp trellis/.gitignore . # Directorio "root" del repo
+```
+
+---
+
+<CodeSurfer
+  title=".gitignore siempre presente"
+  code={require("!raw-loader!examples/gitignore")}
+  lang="bash"
+  showNumbers={true}
+  dark={true}
+  steps={[
+    { lines: [1], notes: "Clave para el vault de Ansible" },
+    { lines: [3], notes: "Otras claves locales" }
+  ]} />
+
+```notes
+En .vault_pass estarán todas las claves que te servirán para descifrar
+las claves cifradas que uses en Ansible y demás:
+https://roots.io/trellis/docs/vault/
+```
