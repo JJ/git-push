@@ -32,7 +32,7 @@ export default {
 	  bash: prismBash,
           yaml: prismYaml,
           perl: prismPerl,
-          perl: prismIni,
+          ini: prismIni,
 	}
     }
     
