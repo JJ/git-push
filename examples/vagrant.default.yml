@@ -13,13 +13,4 @@ vagrant_plugins:
   - name: vagrant-bindfs
   - name: vagrant-hostmanager
 
-# Array of synced folders:
-# - local_path: .
-#   destination: /path/on/vm
-#   create: false
-#   type: nfs
-#   bindfs: true
-#   mount_options: []
-#   bindfs_options: {}
-# See https://www.vagrantup.com/docs/synced-folders/basic_usage.html#mount_options
 vagrant_synced_folders: []
