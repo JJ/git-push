@@ -433,3 +433,78 @@ https://www.atlassian.com/git/tutorials/comparing-workflows
 En general, manteniendo una serie de tareas claras se evitan los
 conflictos y usando integración continua se evitan errores. 
 ```
+
+---
+# Trabajando con sub-árboles
+
+<Appear>
+<li>Cuando quieres integrar cambios de varios <em>repos</em> en el tuyo</li>
+<li>Trellis, Bedrock y Sage, por ejemplo</li>
+</Appear>
+
+```notes
+Vamos a tirar directamente de este artículo, que es viejuno pero
+interesante
+http://www.chrisknightindustries.com/2015/24/11/git-subtrees-for-trellis-workflow.html
+```
+---
+
+# Crea repositorio 
+
+## Un subdirectorio por subárbol
+
+![Contenedores](https://farm5.staticflickr.com/4851/30972649047_4b9ef58aa4_k_d.jpg)
+
+---
+<CodeSurfer
+  title="Creando sub-árboles"
+  code={require("!raw-loader!examples/trellis-subtree.sh")}
+  lang="bash"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { lines: [1], notes: "Añade remote para rama" },
+    { lines: [2], notes: "Fetch+checkout == pull. Aquí lo separamos" },
+    { lines: [3], notes: "Pasa a rama master" },
+    { lines: [5], notes: "Convierte rama en un subárbol" }
+  ]} />
+
+```notes
+Recordando lo que dijimos al principio, los árboles son unos de los
+objetos que se usan en git. En este caso, estamos leyendo en un árbol
+cuyo prefijo va a ser el nombre del directorio que hemos creado una
+rama
+```
+
+---
+<CodeSurfer
+  title="Actualizando sub-árboles"
+  code={require("!raw-loader!examples/actualiza-trellis.sh")}
+  lang="bash"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { lines: [1], notes: "Cambia a la rama" },
+    { lines: [4], notes: "-X acepta siempre original, --squash crea un solo commit" },
+    { lines: [4], notes: "Con esto salta el editor y puedes ver todos los commits incorporados" },
+  ]} />
+
+```notes
+El subárbol es sólo un mapeo de una rama, por lo que siempre que
+actualicemos tenemos que hacerlo trabajando sobre esa rama.
+```
+
+---
+![War by Edwin Starr](https://upload.wikimedia.org/wikipedia/en/1/19/Edwin-starr-war-single-1970.jpg)
+# **¡Git!** ¡Push!
+## ¿Para qué sirve?
+# Absolutamente **para todo**
+
+---
+
+# Muchas gracias
+
+![¿Preguntas?](https://farm5.staticflickr.com/4815/44999068245_6ba7197c31_z_d.jpg)
+
+[`@jjmerelo`](https://twitter.com/jjmerelo)
+| [Canal YouTube](https://youtube.com/jjmerelo) | [`JJ` en GitHub](https://github.com/JJ)
