@@ -1,0 +1,19 @@
+#!/usr/bin/env perl
+
+use v5.14;
+
+use Path::Tiny;
+
+my $msg_file = shift;
+my $msg = path($msg_file)->slurp;
+my @issues = ($msg =~ /\#(\d+)/g);
+exit(1) if (!@issues );
+my $repo_uri = `git config --get remote.origin.url`;
+my ($user,$repo) = ($repo_uri =~ /(\w+)\/([^.]+)/);
+for my $i (@issues) {
+  my $issue = `wget -q -O - https://github.com/$user/$repo/issues/$i`;
+  unless ($issue) {
+    say "✘ Commit incorrecto, issue #$i no existe";
+    exit(1);
+  }
+}

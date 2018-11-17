@@ -1,10 +1,10 @@
 {
   "name": "git-push",
   "version": "1.0.0",
-  "description": "Presentación para WPConf granada",
+  "description": "Presentación para WPConf Granada",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm start",
     "start": "mdx-deck git-push.mdx"
   },
   "repository": {
@@ -21,12 +21,9 @@
     "url": "https://github.com/JJ/git-push/issues"
   },
   "homepage": "https://github.com/JJ/git-push#readme",
-  "devDependencies": {
+  "dependencies": {
     "mdx-deck": "^1.7.10",
     "mdx-deck-code-surfer": "^0.5.3",
     "raw-loader": "^0.5.1"
-  },
-  "dependencies": {
-    "punycode": "^2.1.1"
   }
 }

@@ -3,6 +3,8 @@ import { future } from 'mdx-deck/themes'
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia'
 import prismBash from 'react-syntax-highlighter/languages/prism/bash'
 import prismYaml from 'react-syntax-highlighter/languages/prism/yaml'
+import prismPerl from 'react-syntax-highlighter/languages/prism/perl'
+import prismIni from 'react-syntax-highlighter/languages/prism/ini'
 
 const monospace = 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace'
 const h1font = "Archivo, sans-serif"
@@ -12,23 +14,25 @@ export default {
 	...future,
     font: h1font, h2font,
     h1: {
-	fontSize: '4em',
+	fontSize: '3.5em',
 	textTransform: 'none',
 	fontFamily: h1font
     },
     h2: {
-	fontSize: '3em',
+	fontSize: '2.75em',
 	textTransform: 'none',
 	fontFamily: h2font,
     },
     code: {
-      	fontSize: '1.5em',
+      	fontSize: '1.1em',
     },
     prism: {
 	style: okaidia,
 	languages: {
 	  bash: prismBash,
-          yaml: prismYaml
+          yaml: prismYaml,
+          perl: prismPerl,
+          ini: prismIni,
 	}
     }
     
