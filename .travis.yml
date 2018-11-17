@@ -4,4 +4,4 @@ node_js:
 install:
   - npm i
 test:
-  - npm start
+  - npm start &
