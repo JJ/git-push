@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "mdx-deck git-push.mdx"
+      "start": "mdx-deck git-push.mdx -p $PORT"
   },
   "repository": {
     "type": "git",
