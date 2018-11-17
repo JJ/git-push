@@ -1,1 +1,1 @@
-web: npm start
+web: mdx-deck git-push.mdx -p $PORT
