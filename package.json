@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
       "test": "npm start",
-      "start": "mdx-deck git-push.mdx -p $PORT"
+      "start": "mdx-deck git-push.mdx -p $PORT -h $HOST"
   },
   "repository": {
     "type": "git",
