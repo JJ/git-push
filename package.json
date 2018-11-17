@@ -4,8 +4,9 @@
   "description": "Presentación para WPConf granada",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install && mdx-deck git-push.mdx"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "mdx-deck git-push.mdx",
+      "build": "mdx-deck build deck.mdx"
   },
   "repository": {
     "type": "git",
