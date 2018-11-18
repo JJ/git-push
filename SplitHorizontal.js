@@ -15,7 +15,7 @@ const SplitHorizontal = ({ children }) => {
     <Root>
       <Flex
         css={{
-         flexDirection: 'row',
+         flexDirection: 'column',
           alignItems: 'center',
           height: '100%'
         }}>
