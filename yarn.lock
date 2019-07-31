@@ -1707,10 +1707,10 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-code-surfer@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/code-surfer/-/code-surfer-0.5.3.tgz#7e5d4c366e56d060173e82c49d85edd6c273df1d"
-  integrity sha512-Yuls9mdaI7vofPyaoKHdkEuWddc1ReVnhuHVKWt6r8EvDkScZ6T3FwOXsAd+WLuCnKYRKLVo4DkkBo5eUi+PGw==
+code-surfer@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/code-surfer/-/code-surfer-0.5.5.tgz#223c7177de6f3a645a4bdfc17515d524ad88e038"
+  integrity sha512-ZjGTuyC0hwq16C3WgUfOV6wJ4z5GQLBqN9enUaA0SuRDK//Z2f9BdQVVTyDh7O0/cJ0NRJsH9LJbrwVx+fruhA==
   dependencies:
     glamor "^2.20.40"
     prism-react-renderer "^0.1.3"
@@ -3769,12 +3769,12 @@ mdurl@^1.0.1:
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
   integrity sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
 
-mdx-deck-code-surfer@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/mdx-deck-code-surfer/-/mdx-deck-code-surfer-0.5.3.tgz#79e846eaa5b4b817abdca99ba08a5641ff3ff76e"
-  integrity sha512-Vh2oEo9zCEJm6ODRImqa3vKP4tqS7DHRpdmsWxlZgaR/qIR+4zvd80IxV/R+s5zdCo999gdg6NF+u9DiTEmaDg==
+mdx-deck-code-surfer@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/mdx-deck-code-surfer/-/mdx-deck-code-surfer-0.5.5.tgz#28fd2c2ea728ffdeac096228a9aa9d0643161cc2"
+  integrity sha512-yKhLue+xdnY6HqXbj/lFsO400h2EmPaaQ8hmuIiB29fG387jMiwDY8yGOlZIhJPFdJDRmmInSOXt6lhmVkk5uw==
   dependencies:
-    code-surfer "^0.5.3"
+    code-surfer "^0.5.5"
     memoize-one "^4.0.2"
 
 mdx-deck@^1.7.10:
@@ -4718,7 +4718,7 @@ punycode@^1.2.4:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
   integrity sha1-wNWmOycYgArY4esPpSachN1BhF4=
 
-punycode@^2.1.0, punycode@^2.1.1:
+punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
@@ -4786,10 +4786,13 @@ range-parser@^1.0.3:
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
   integrity sha1-9JvmtIeJTdxA3MlKMi9hEJLgDV4=
 
-raw-loader@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
-  integrity sha1-DD0L6u2KAclm2Xh793goElKpeao=
+raw-loader@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-3.1.0.tgz#5e9d399a5a222cc0de18f42c3bc5e49677532b3f"
+  integrity sha512-lzUVMuJ06HF4rYveaz9Tv0WRlUMxJ0Y1hgSkkgg+50iEdaI0TthyEDe08KIHb0XsF6rn8WYTqPCaGTZg3sX+qA==
+  dependencies:
+    loader-utils "^1.1.0"
+    schema-utils "^2.0.1"
 
 rc@^1.2.7:
   version "1.2.8"
@@ -5182,6 +5185,14 @@ schema-utils@^0.4.4, schema-utils@^0.4.5:
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.4.7.tgz#ba74f597d2be2ea880131746ee17d0a093c68187"
   integrity sha512-v/iwU6wvwGK8HbU9yi3/nhGzP0yGSuhQMzL6ySiec1FSrZZDkhm4noOSWzrNFo/jEc+SJY6jRTwuwbSXJPDUnQ==
+  dependencies:
+    ajv "^6.1.0"
+    ajv-keywords "^3.1.0"
+
+schema-utils@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.0.1.tgz#1eec2e059556af841b7f3a83b61af13d7a3f9196"
+  integrity sha512-HJFKJ4JixDpRur06QHwi8uu2kZbng318ahWEKgBjc0ZklcE4FDvmm2wghb448q0IRaABxIESt8vqPFvwgMB80A==
   dependencies:
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
