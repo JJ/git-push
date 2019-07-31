@@ -13,49 +13,40 @@
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">import { Head, Image, Appear } from 'mdx-deck'
-import { SplitRight, Split, Horizontal, FullScreenCode } from 'mdx-deck'
-import { CodeSurfer } from "mdx-deck-code-surfer"
-
-<Head>
-  <title>Git! Push</title>
-  <meta name='twitter:site' content='@jjmerelo' />
-  <meta name='twitter:title' content='Git! Push! What is it good for?' />
-  <meta name='twitter:description' content='Absolutely everything!' />
-  <link href="https://fonts.googleapis.com/css?family=Koho|Open+Sans" rel="stylesheet" /> 
-</Head>
-
-
-export { default as theme } from './theme'
-
-![War by Edwin Starr](https://upload.wikimedia.org/wikipedia/en/1/19/Edwin-starr-war-single-1970.jpg)
-# Git! Push!
-## What is it good for?
-# Absolutely *errthang*!</script></section><section  data-markdown><script type="text/template">![Servidor con 38 años](https://farm1.staticflickr.com/3/5119753_0dd1c36628_o_d.jpg)
+      <div class="slides">
+        <section  data-markdown># `git` como estilo de vida
 
 `@jjmerelo`
-<Appear>
-    <li>Autor (con <code>@psicobyte_</code>) de "Aprende git")</li>
-    <li>Contribuyente a Perl 6</li>
-    <li>Profe en UGR</li>
-</Appear></script></section><section  data-markdown><script type="text/template">export default SplitRight
+        </section>
 
+        <section data-markdown>
+          ![Servidor con 38 años](https://farm1.staticflickr.com/3/5119753_0dd1c36628_o_d.jpg)
+
+* Autor (con `@psicobyte_`) de "Aprende git")
+* ♥ Perl 6
+* Profe en UGR
+        </section>
+
+        <section data-markdown>
+          # `git`
 ![Push](https://farm2.staticflickr.com/1937/43783892920_78ee9bef50_h_d.jpg)
+        </section>
 
-# `git`</script></section><section  data-markdown><script type="text/template">export default SplitRight
+       <section data-markdown>
+
 
 # ¿Para qué sirve?
 
 ![Engranaje raruno](https://farm5.staticflickr.com/4727/25523339178_1eea0ad936_k_d.jpg)
 
 
-```notes
+<aside class='notes'>
 Hay mucho material dirigido específicamente a Wordpress, como este
 curso: https://wppusher.com/wordpress-git-course 
 En general, no se trata de algo demasiado especial, salvo los
 requisitos específicos por estar desarrollando contra un sistema de
 gestió de contenidos
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template">export default SplitRight
 
 ![¿Para qué sirve?](https://farm5.staticflickr.com/4810/31993107578_77df74653c_k_d.jpg)
@@ -82,20 +73,20 @@ gestió de contenidos
 
 # Distribuido
 
-```notes
+<aside class='notes'>
 El que sea distribuido permite que se pueda trabajar y hacer `push` a
 repos remotos, y es lo que lo ha convertido en una herramienta de
 despliegue
-```</script></section><section  data-markdown><script type="text/template">export default SplitRight
+</aside></script></section><section  data-markdown><script type="text/template">export default SplitRight
 
 ![Engranaje y cara](https://farm9.staticflickr.com/8623/16133974149_402bdb3f06_b_d.jpg)
 
 # Con un sistema de eventos
 
-```notes
+<aside class='notes'>
 Este sistema de eventos o *ganchos* sirve para lanzar acciones cada
 vez que sucede algo, y permite regular flujos de trabajo.
-```</script></section><section  data-markdown><script type="text/template">export default Split
+</aside></script></section><section  data-markdown><script type="text/template">export default Split
 
 # *filesystem* direccionado por contenido tiene:
 
@@ -124,31 +115,31 @@ vez que sucede algo, y permite regular flujos de trabajo.
 
 # * Tags * 
 
-```notes
+<aside class='notes'>
 Los objetos tipo Tag apuntan a un commit en una referencia inmutable https://git-scm.com/book/en/v2/Git-Internals-Git-References
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template">export default SplitRight
 
 # Aloja repos en GitHub, Bitbucket o Gitlab
 
 ![Hotel Niza en Turín](https://farm6.staticflickr.com/5104/5681450206_011f887c35_b_d.jpg)
 
-```notes
+<aside class='notes'>
 Cada uno tiene sus ventajas y sus inconvenientes, aunque sin duda el
 más popular para proyectos libres es GitHub. Si no es libre, Bitbucket
 te permite una cierta cantidad de repos privados, igual que
 GitLab. GitHub tiene muchas más integraciones que el resto, pero en
 general es una elección personal o, por supuesto, corporativa
 Un artículo sobre esto: https://www.elegantthemes.com/blog/tips-tricks/answering-the-most-important-questions-about-using-git-with-wordpress
-```</script></section><section  data-markdown><script type="text/template">export default FullScreenCode
+</aside></script></section><section  data-markdown><script type="text/template">export default FullScreenCode
 
-```bash
+</aside>bash
 git clone <URL con git o https>
 git add <nuevo fichero>
 git commit -m "Explico el cambio"
 git pull # Evitando conflictos
 git push
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template"><CodeSurfer
   title="Clonación de Trellis en nuestro repo"
   code={require("!raw-loader!examples/git-inicial.sh")}
@@ -163,7 +154,7 @@ git push
   ]}
 />
 
-```notes
+<aside class='notes'>
 Se trata de un *shallow clone*
 https://stackoverflow.com/questions/23708231/git-shallow-clone-clone-depth-misses-remote-branches
 Descarga commits hasta un máximo de uno, es decir, el estado del repo
@@ -171,17 +162,17 @@ en el último commit y ya está. No puedes consultar la historia, por
 ejemplo. También ponemos un tag para volver aquí cuando
 queramos. También empezamos a ver la naturaleza distribuida de git,
 manejando dos remotes, el original que se suele llamar *upstream*
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template">### ①②③ Para los ránkings de `@iblancasa`
 
 ![Ránkings](img/ranking.png)
 
-```notes
+<aside class='notes'>
 Estos ránkings los inicié yo, pero ahora se publican todos los
 miércoles, Tienen ránkings por comunidad autónoma y provincia y
 también nacionales, en JSON o MD. Te pueden servir para descubrir a
 gente cerca tuyo o simplemente para picarte con tus compis
-```</script></section><section  data-markdown><script type="text/template">export default Split
+</aside></script></section><section  data-markdown><script type="text/template">export default Split
 
 # Organízate
 
@@ -189,11 +180,11 @@ gente cerca tuyo o simplemente para picarte con tus compis
 
 ![Un issue](https://farm5.staticflickr.com/4825/45180109064_6a3c67fffd_o_d.jpg)
 
-```notes
+<aside class='notes'>
 Los issues y milestones (o mojones) de los sitios de hosting como github son una
 forma de organización de un equipo de trabajo, y también una buena
 forma de comunicarse con la comunidad de software libre
-```</script></section><section  data-markdown><script type="text/template">## Por ejemplo: contribuyentes en *Hacktoberfest*
+</aside></script></section><section  data-markdown><script type="text/template">## Por ejemplo: contribuyentes en *Hacktoberfest*
 
 ![Contribuciones al sage starter theme](img/issues.png)</script></section><section  data-markdown><script type="text/template">
 
@@ -215,10 +206,10 @@ forma de comunicarse con la comunidad de software libre
 
 ![Mensaje desconcertante](https://farm5.staticflickr.com/4815/45909245751_f99508b781_b_d.jpg)
 
-```notes
+<aside class='notes'>
 Los mensajes deben ser predicados cuyo sujeto es el cambio que has
 hecho. Los cambios deben ser atómicos
-```</script></section><section  data-markdown><script type="text/template">
+</aside></script></section><section  data-markdown><script type="text/template">
 # Y trabaja siempre contra una tarea
 
 ```bash
@@ -248,13 +239,13 @@ for my $i (@issues) {
 }
 ```
 
-```notes
+<aside class='notes'>
 Algunos plugins como GitHub updater permiten crear hooks directamente
 desde él:
 https://medium.com/@limikael/continuous-integration-for-wordpress-d152ec4852e5. Lo
 que ocurre es que sólo va a afectar a lo que se desarrolle dentro del
 mismo WP, y no a otras cosas auxiliares como lo que se haga en Trellis
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template">export default Split
 
 ![Corrigiendo con piedra encima](img/amend.png)
@@ -301,11 +292,11 @@ git jo
 git grep password
 ```
 
-```notes
+<aside class='notes'>
 Aparece en demasiado sitios, así que habrá que ocultarlo. Una gestión
 segura de API keys y passwords incluye usar de forma hábil el
 .gitignore
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template"># `.gitignore` para la seguridad
 
 ```bash
@@ -323,11 +314,11 @@ cp trellis/.gitignore . # Directorio "root" del repo
     { lines: [3], notes: "Otras claves locales" }
   ]} />
 
-```notes
+<aside class='notes'>
 En .vault_pass estarán todas las claves que te servirán para descifrar
 las claves cifradas que uses en Ansible y demás:
 https://roots.io/trellis/docs/vault/
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template"># O trabajando con `composer`
 
 ```bash
@@ -339,12 +330,12 @@ wp-config.php
 /wp-content
 ```
 
-```notes
+<aside class='notes'>
 Composer es otra alternativa para trabajar con git, y en esta serie de
 artículos: https://deliciousbrains.com/storing-wordpress-in-git/
 explican como usarlo. Permite trabajar con las dependencias y usar la
 línea de órdenes de WP para gestionarlo todo.
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template"># Integrando continuamente
 
 ```yaml
@@ -361,18 +352,18 @@ before_script:
 script: vendor/bin/phpunit
 ```
 
-```notes
+<aside class='notes'>
 CI de https://carlalexander.ca/continuous-integration-wordpress/
 Otros servicios como Buddy ya integran la prueba de WordPress:
 https://buddy.works/guides/how-introduce-continuous-deployment-to-wordpress 
 
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template">
 # ¿Cómo fluirá `git`?
 
 ![Fluyendo el Danubio no azul](https://farm9.staticflickr.com/8252/29175359022_a09f2d8a08_k_d.jpg)
 
-```notes
+<aside class='notes'>
 Hay muchos patrones de trabajo de git soportados, en algunos casos,
 por herramientas diversas
 https://www.codingblocks.net/podcast/comparing-git-workflows/
@@ -381,7 +372,7 @@ También este:
 https://www.atlassian.com/git/tutorials/comparing-workflows
 En general, manteniendo una serie de tareas claras se evitan los
 conflictos y usando integración continua se evitan errores. 
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template"># Trabajando con sub-árboles
 
 <Appear>
@@ -389,11 +380,11 @@ conflictos y usando integración continua se evitan errores.
 <li>Trellis, Bedrock y Sage, por ejemplo</li>
 </Appear>
 
-```notes
+<aside class='notes'>
 Vamos a tirar directamente de este artículo, que es viejuno pero
 interesante
 http://www.chrisknightindustries.com/2015/24/11/git-subtrees-for-trellis-workflow.html
-```</script></section><section  data-markdown><script type="text/template">
+</aside></script></section><section  data-markdown><script type="text/template">
 # Crea repositorio 
 
 ## Un subdirectorio por subárbol
@@ -412,12 +403,12 @@ http://www.chrisknightindustries.com/2015/24/11/git-subtrees-for-trellis-workflo
     { lines: [4], notes: "Convierte rama en un subárbol" }
   ]} />
 
-```notes
+<aside class='notes'>
 Recordando lo que dijimos al principio, los árboles son unos de los
 objetos que se usan en git. En este caso, estamos leyendo en un árbol
 cuyo prefijo va a ser el nombre del directorio que hemos creado una
 rama
-```
+</aside>
 </script></section><section  data-markdown><script type="text/template"><CodeSurfer
   title="Actualizando sub-árboles"
   code={require("!raw-loader!examples/actualiza-trellis.sh")}
@@ -430,10 +421,10 @@ rama
     { lines: [4], notes: "Con esto salta el editor y puedes ver todos los commits incorporados" },
   ]} />
 
-```notes
+  <aside class='notes'>
 El subárbol es sólo un mapeo de una rama, por lo que siempre que
 actualicemos tenemos que hacerlo trabajando sobre esa rama.
-```
+  </aside>
 </script></section><section  data-markdown><script type="text/template">![War by Edwin Starr](https://upload.wikimedia.org/wikipedia/en/1/19/Edwin-starr-war-single-1970.jpg)
 # **¡Git!** ¡Push!
 ## ¿Para qué sirve?
