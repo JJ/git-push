@@ -1,10 +1,10 @@
 // example theme.js
 import { future } from 'mdx-deck/themes'
-import okaidia from 'react-syntax-highlighter/styles/prism/okaidia'
-import prismBash from 'react-syntax-highlighter/languages/prism/bash'
-import prismYaml from 'react-syntax-highlighter/languages/prism/yaml'
-import prismPerl from 'react-syntax-highlighter/languages/prism/perl'
-import prismIni from 'react-syntax-highlighter/languages/prism/ini'
+import okaidia from 'react-syntax-highlighter/dist/esm/styles/prism/okaidia'
+import prismBash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
+import prismYaml from 'react-syntax-highlighter/dist/esm/languages/prism/yaml'
+import prismPerl from 'react-syntax-highlighter/dist/esm/languages/prism/perl'
+import prismIni from 'react-syntax-highlighter/dist/esm/languages/prism/ini'
 
 const monospace = 'SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace'
 const h1font = "Archivo, sans-serif"
