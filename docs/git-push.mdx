@@ -47,27 +47,27 @@ En general, no se trata de algo demasiado especial, salvo los
 requisitos específicos por estar desarrollando contra un sistema de
 gestió de contenidos
 </aside>
-</script></section><section  data-markdown><script type="text/template">export default SplitRight
+</script></section><section  data-markdown><script type="text/template">
 
 ![¿Para qué sirve?](https://farm5.staticflickr.com/4810/31993107578_77df74653c_k_d.jpg)
 
 # Para la nube
-</script></section><section  data-markdown><script type="text/template">export default Split
+</script></section><section  data-markdown><script type="text/template">
 
 # Pero ¿qué es?
 
 ![Máquina voladora raruna](https://farm2.staticflickr.com/1952/30925081597_38b467b933_k_d.jpg)
-</script></section><section  data-markdown><script type="text/template">export default SplitRight
+</script></section><section  data-markdown><script type="text/template">
 
 # Un sistema de ficheros direccionado por contenido
 
 ![Como los tápers](https://farm1.staticflickr.com/701/31782788926_0798f4eb0b_k_d.jpg)
-</script></section><section  data-markdown><script type="text/template">export default SplitRight
+</script></section><section  data-markdown><script type="text/template">
 
 # Con un sistema de gestión de versiones encima
 
 ![Como este piedro](https://farm9.staticflickr.com/8601/16187820372_6eb950631c_k_d.jpg)
-</script></section><section  data-markdown><script type="text/template">export default SplitRight
+</script></section><section  data-markdown><script type="text/template">
 
 ![La gaviota está en la rama máster](https://farm5.staticflickr.com/4877/30950194657_c02e71136c_h_d.jpg)
 
@@ -77,7 +77,7 @@ gestió de contenidos
 El que sea distribuido permite que se pueda trabajar y hacer `push` a
 repos remotos, y es lo que lo ha convertido en una herramienta de
 despliegue
-</aside></script></section><section  data-markdown><script type="text/template">export default SplitRight
+</aside></script></section><section  data-markdown><script type="text/template">
 
 ![Engranaje y cara](https://farm9.staticflickr.com/8623/16133974149_402bdb3f06_b_d.jpg)
 
@@ -86,30 +86,30 @@ despliegue
 <aside class='notes'>
 Este sistema de eventos o *ganchos* sirve para lanzar acciones cada
 vez que sucede algo, y permite regular flujos de trabajo.
-</aside></script></section><section  data-markdown><script type="text/template">export default Split
+</aside></script></section><section  data-markdown><script type="text/template">
 
 # *filesystem* direccionado por contenido tiene:
 
-![Mecanismo del reloj](https://farm2.staticflickr.com/1438/1240116506_ae3ada3a4b_b_d.jpg)</script></section><section  data-markdown><script type="text/template">export default SplitRight
+![Mecanismo del reloj](https://farm2.staticflickr.com/1438/1240116506_ae3ada3a4b_b_d.jpg)</script></section><section  data-markdown><script type="text/template">
 
 # *Blobs*
 
-![Medusas](https://farm2.staticflickr.com/1888/43736920854_cd8bad7158_k_d.jpg)</script></section><section  data-markdown><script type="text/template">export default Split
+![Medusas](https://farm2.staticflickr.com/1888/43736920854_cd8bad7158_k_d.jpg)</script></section><section  data-markdown><script type="text/template">
 
 # *Trees*
 
 ![Palmeras en Santa Mónica](https://farm2.staticflickr.com/1858/30580425888_3cda035fe2_k_d.jpg)
-</script></section><section  data-markdown><script type="text/template">export default Split
+</script></section><section  data-markdown><script type="text/template">
 
 # Y un sistema de gestión de fuentes tiene:
 
 ![Fuente de las Granadas con HDR excesivo](https://farm1.staticflickr.com/172/443895859_7075396f86_o_d.jpg)
-</script></section><section  data-markdown><script type="text/template">export default SplitRight
+</script></section><section  data-markdown><script type="text/template">
 
 ![Compromiso](https://farm8.staticflickr.com/7214/7018457543_5ce0fe9625_o_d.jpg)
 
 # * Commits * 
-</script></section><section  data-markdown><script type="text/template">export default Split
+</script></section><section  data-markdown><script type="text/template">
 
 ![Name tag](https://farm2.staticflickr.com/1484/25154592685_f6632618ed_o_d.jpg)
 
@@ -118,7 +118,7 @@ vez que sucede algo, y permite regular flujos de trabajo.
 <aside class='notes'>
 Los objetos tipo Tag apuntan a un commit en una referencia inmutable https://git-scm.com/book/en/v2/Git-Internals-Git-References
 </aside>
-</script></section><section  data-markdown><script type="text/template">export default SplitRight
+</script></section><section  data-markdown><script type="text/template">
 
 # Aloja repos en GitHub, Bitbucket o Gitlab
 
@@ -133,26 +133,13 @@ general es una elección personal o, por supuesto, corporativa
 Un artículo sobre esto: https://www.elegantthemes.com/blog/tips-tricks/answering-the-most-important-questions-about-using-git-with-wordpress
 </aside></script></section><section  data-markdown><script type="text/template">export default FullScreenCode
 
-</aside>bash
+```bash
 git clone <URL con git o https>
 git add <nuevo fichero>
 git commit -m "Explico el cambio"
 git pull # Evitando conflictos
 git push
-</aside>
-</script></section><section  data-markdown><script type="text/template"><CodeSurfer
-  title="Clonación de Trellis en nuestro repo"
-  code={require("!raw-loader!examples/git-inicial.sh")}
-  lang="bash"
-  showNumbers={true}
-  dark={false}
-  steps={[
-    { notes: "Creando la configuración inicial"},
-    { lines: [2,3], notes: "Clona Trellis en un repo" },
-    { lines: [4,5], notes: "Añade a nuestro repo" },
-    { lines: [6,7], notes: "Crea un tag y lo sube a GitHub" },	
-  ]}
-/>
+```
 
 <aside class='notes'>
 Se trata de un *shallow clone*
@@ -163,28 +150,32 @@ ejemplo. También ponemos un tag para volver aquí cuando
 queramos. También empezamos a ver la naturaleza distribuida de git,
 manejando dos remotes, el original que se suele llamar *upstream*
 </aside>
-</script></section><section  data-markdown><script type="text/template">### ①②③ Para los ránkings de `@iblancasa`
+</script></section>
+<section  data-markdown><script type="text/template">### ①②③ Para los ránkings de `@iblancasa`
 
 ![Ránkings](img/ranking.png)
-
+</script>
 <aside class='notes'>
 Estos ránkings los inicié yo, pero ahora se publican todos los
 miércoles, Tienen ránkings por comunidad autónoma y provincia y
 también nacionales, en JSON o MD. Te pueden servir para descubrir a
 gente cerca tuyo o simplemente para picarte con tus compis
-</aside></script></section><section  data-markdown><script type="text/template">export default Split
-
+</aside></section>
+<section  data-markdown><script type="text/template">
 # Organízate
 
 ## *Issues* y *milestones* al rescate
 
 ![Un issue](https://farm5.staticflickr.com/4825/45180109064_6a3c67fffd_o_d.jpg)
-
+</script>
 <aside class='notes'>
 Los issues y milestones (o mojones) de los sitios de hosting como github son una
 forma de organización de un equipo de trabajo, y también una buena
 forma de comunicarse con la comunidad de software libre
-</aside></script></section><section  data-markdown><script type="text/template">## Por ejemplo: contribuyentes en *Hacktoberfest*
+</aside></section>
+
+
+<section  data-markdown><script type="text/template">## Por ejemplo: contribuyentes en *Hacktoberfest*
 
 ![Contribuciones al sage starter theme](img/issues.png)</script></section><section  data-markdown><script type="text/template">
 
@@ -200,7 +191,7 @@ forma de comunicarse con la comunidad de software libre
     { lines: [6], notes: "También la versión" },
   ]}
 />
-</script></section><section  data-markdown><script type="text/template">export default Split
+</script></section><section  data-markdown><script type="text/template">
 
 # Cuida los mensajes de commit
 
@@ -238,7 +229,7 @@ for my $i (@issues) {
   }
 }
 ```
-
+</script>
 <aside class='notes'>
 Algunos plugins como GitHub updater permiten crear hooks directamente
 desde él:
@@ -246,7 +237,7 @@ https://medium.com/@limikael/continuous-integration-for-wordpress-d152ec4852e5. 
 que ocurre es que sólo va a afectar a lo que se desarrolle dentro del
 mismo WP, y no a otras cosas auxiliares como lo que se haga en Trellis
 </aside>
-</script></section><section  data-markdown><script type="text/template">export default Split
+</section><section  data-markdown><script type="text/template">
 
 ![Corrigiendo con piedra encima](img/amend.png)
 
@@ -255,7 +246,7 @@ mismo WP, y no a otras cosas auxiliares como lo que se haga en Trellis
 ```bash
 git commit --amend
 ```
-</script></section><section  data-markdown><script type="text/template">export default Split
+</script></section><section  data-markdown><script type="text/template">
 
 ![Grabando](https://farm5.staticflickr.com/4837/30971819987_26da5b9af7_k_d.jpg)
 
@@ -264,7 +255,9 @@ git commit --amend
 ```bash
 git config --global alias.jo 'commit --amend'
 git jo
-```</script></section><section  data-markdown><script type="text/template">
+  ```</script></section>
+
+<section  data-markdown><script type="text/template">
 # Recordando todo: 
 
 `~/.gitconfig`
@@ -282,8 +275,7 @@ git jo
 [alias]
 	jo = commit --amend
 ```
-</script></section><section  data-markdown><script type="text/template">export default SplitRight
-
+</script></section><section  data-markdown><script type="text/template">
 ![Busca la camiseta del Madrid](https://farm5.staticflickr.com/4871/44990427415_2827512257_h_d.jpg)
 
 # Busca y encontrarás
@@ -291,13 +283,13 @@ git jo
 ```bash
 git grep password
 ```
-
+</script>
 <aside class='notes'>
 Aparece en demasiado sitios, así que habrá que ocultarlo. Una gestión
 segura de API keys y passwords incluye usar de forma hábil el
 .gitignore
 </aside>
-</script></section><section  data-markdown><script type="text/template"># `.gitignore` para la seguridad
+</section><section  data-markdown><script type="text/template"># `.gitignore` para la seguridad
 
 ```bash
 cp trellis/.gitignore . # Directorio "root" del repo
