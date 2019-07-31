@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="./css/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">import { Head, Image, Appear } from 'mdx-deck'
+import { SplitRight, Split, Horizontal, FullScreenCode } from 'mdx-deck'
+import { CodeSurfer } from "mdx-deck-code-surfer"
+
+<Head>
+  <title>Git! Push</title>
+  <meta name='twitter:site' content='@jjmerelo' />
+  <meta name='twitter:title' content='Git! Push! What is it good for?' />
+  <meta name='twitter:description' content='Absolutely everything!' />
+  <link href="https://fonts.googleapis.com/css?family=Koho|Open+Sans" rel="stylesheet" /> 
+</Head>
+
+
+export { default as theme } from './theme'
+
+![War by Edwin Starr](https://upload.wikimedia.org/wikipedia/en/1/19/Edwin-starr-war-single-1970.jpg)
+# Git! Push!
+## What is it good for?
+# Absolutely *errthang*!</script></section><section  data-markdown><script type="text/template">![Servidor con 38 años](https://farm1.staticflickr.com/3/5119753_0dd1c36628_o_d.jpg)
+
+`@jjmerelo`
+<Appear>
+    <li>Autor (con <code>@psicobyte_</code>) de "Aprende git")</li>
+    <li>Contribuyente a Perl 6</li>
+    <li>Profe en UGR</li>
+</Appear></script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+![Push](https://farm2.staticflickr.com/1937/43783892920_78ee9bef50_h_d.jpg)
+
+# `git`</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+# ¿Para qué sirve?
+
+![Engranaje raruno](https://farm5.staticflickr.com/4727/25523339178_1eea0ad936_k_d.jpg)
+
+
+```notes
+Hay mucho material dirigido específicamente a Wordpress, como este
+curso: https://wppusher.com/wordpress-git-course 
+En general, no se trata de algo demasiado especial, salvo los
+requisitos específicos por estar desarrollando contra un sistema de
+gestió de contenidos
+```
+</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+![¿Para qué sirve?](https://farm5.staticflickr.com/4810/31993107578_77df74653c_k_d.jpg)
+
+# Para la nube
+</script></section><section  data-markdown><script type="text/template">export default Split
+
+# Pero ¿qué es?
+
+![Máquina voladora raruna](https://farm2.staticflickr.com/1952/30925081597_38b467b933_k_d.jpg)
+</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+# Un sistema de ficheros direccionado por contenido
+
+![Como los tápers](https://farm1.staticflickr.com/701/31782788926_0798f4eb0b_k_d.jpg)
+</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+# Con un sistema de gestión de versiones encima
+
+![Como este piedro](https://farm9.staticflickr.com/8601/16187820372_6eb950631c_k_d.jpg)
+</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+![La gaviota está en la rama máster](https://farm5.staticflickr.com/4877/30950194657_c02e71136c_h_d.jpg)
+
+# Distribuido
+
+```notes
+El que sea distribuido permite que se pueda trabajar y hacer `push` a
+repos remotos, y es lo que lo ha convertido en una herramienta de
+despliegue
+```</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+![Engranaje y cara](https://farm9.staticflickr.com/8623/16133974149_402bdb3f06_b_d.jpg)
+
+# Con un sistema de eventos
+
+```notes
+Este sistema de eventos o *ganchos* sirve para lanzar acciones cada
+vez que sucede algo, y permite regular flujos de trabajo.
+```</script></section><section  data-markdown><script type="text/template">export default Split
+
+# *filesystem* direccionado por contenido tiene:
+
+![Mecanismo del reloj](https://farm2.staticflickr.com/1438/1240116506_ae3ada3a4b_b_d.jpg)</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+# *Blobs*
+
+![Medusas](https://farm2.staticflickr.com/1888/43736920854_cd8bad7158_k_d.jpg)</script></section><section  data-markdown><script type="text/template">export default Split
+
+# *Trees*
+
+![Palmeras en Santa Mónica](https://farm2.staticflickr.com/1858/30580425888_3cda035fe2_k_d.jpg)
+</script></section><section  data-markdown><script type="text/template">export default Split
+
+# Y un sistema de gestión de fuentes tiene:
+
+![Fuente de las Granadas con HDR excesivo](https://farm1.staticflickr.com/172/443895859_7075396f86_o_d.jpg)
+</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+![Compromiso](https://farm8.staticflickr.com/7214/7018457543_5ce0fe9625_o_d.jpg)
+
+# * Commits * 
+</script></section><section  data-markdown><script type="text/template">export default Split
+
+![Name tag](https://farm2.staticflickr.com/1484/25154592685_f6632618ed_o_d.jpg)
+
+# * Tags * 
+
+```notes
+Los objetos tipo Tag apuntan a un commit en una referencia inmutable https://git-scm.com/book/en/v2/Git-Internals-Git-References
+```
+</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+# Aloja repos en GitHub, Bitbucket o Gitlab
+
+![Hotel Niza en Turín](https://farm6.staticflickr.com/5104/5681450206_011f887c35_b_d.jpg)
+
+```notes
+Cada uno tiene sus ventajas y sus inconvenientes, aunque sin duda el
+más popular para proyectos libres es GitHub. Si no es libre, Bitbucket
+te permite una cierta cantidad de repos privados, igual que
+GitLab. GitHub tiene muchas más integraciones que el resto, pero en
+general es una elección personal o, por supuesto, corporativa
+Un artículo sobre esto: https://www.elegantthemes.com/blog/tips-tricks/answering-the-most-important-questions-about-using-git-with-wordpress
+```</script></section><section  data-markdown><script type="text/template">export default FullScreenCode
+
+```bash
+git clone <URL con git o https>
+git add <nuevo fichero>
+git commit -m "Explico el cambio"
+git pull # Evitando conflictos
+git push
+```
+</script></section><section  data-markdown><script type="text/template"><CodeSurfer
+  title="Clonación de Trellis en nuestro repo"
+  code={require("!raw-loader!examples/git-inicial.sh")}
+  lang="bash"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { notes: "Creando la configuración inicial"},
+    { lines: [2,3], notes: "Clona Trellis en un repo" },
+    { lines: [4,5], notes: "Añade a nuestro repo" },
+    { lines: [6,7], notes: "Crea un tag y lo sube a GitHub" },	
+  ]}
+/>
+
+```notes
+Se trata de un *shallow clone*
+https://stackoverflow.com/questions/23708231/git-shallow-clone-clone-depth-misses-remote-branches
+Descarga commits hasta un máximo de uno, es decir, el estado del repo
+en el último commit y ya está. No puedes consultar la historia, por
+ejemplo. También ponemos un tag para volver aquí cuando
+queramos. También empezamos a ver la naturaleza distribuida de git,
+manejando dos remotes, el original que se suele llamar *upstream*
+```
+</script></section><section  data-markdown><script type="text/template">### ①②③ Para los ránkings de `@iblancasa`
+
+![Ránkings](img/ranking.png)
+
+```notes
+Estos ránkings los inicié yo, pero ahora se publican todos los
+miércoles, Tienen ránkings por comunidad autónoma y provincia y
+también nacionales, en JSON o MD. Te pueden servir para descubrir a
+gente cerca tuyo o simplemente para picarte con tus compis
+```</script></section><section  data-markdown><script type="text/template">export default Split
+
+# Organízate
+
+## *Issues* y *milestones* al rescate
+
+![Un issue](https://farm5.staticflickr.com/4825/45180109064_6a3c67fffd_o_d.jpg)
+
+```notes
+Los issues y milestones (o mojones) de los sitios de hosting como github son una
+forma de organización de un equipo de trabajo, y también una buena
+forma de comunicarse con la comunidad de software libre
+```</script></section><section  data-markdown><script type="text/template">## Por ejemplo: contribuyentes en *Hacktoberfest*
+
+![Contribuciones al sage starter theme](img/issues.png)</script></section><section  data-markdown><script type="text/template">
+
+<CodeSurfer
+  title="Modificando YAML"
+  code={require("!raw-loader!examples/vagrant.default.yml")}
+  lang="yaml"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { notes: "Cambiamos la máquina virtual a Ubuntu 18.04"},
+    { lines: [5], notes: "Alterando vagrant_box" },
+    { lines: [6], notes: "También la versión" },
+  ]}
+/>
+</script></section><section  data-markdown><script type="text/template">export default Split
+
+# Cuida los mensajes de commit
+
+![Mensaje desconcertante](https://farm5.staticflickr.com/4815/45909245751_f99508b781_b_d.jpg)
+
+```notes
+Los mensajes deben ser predicados cuyo sujeto es el cambio que has
+hecho. Los cambios deben ser atómicos
+```</script></section><section  data-markdown><script type="text/template">
+# Y trabaja siempre contra una tarea
+
+```bash
+git commit -am "Testea con más memoria Ubuntu refs #1"
+git push
+```
+
+![Issue referenciado](img/refs-issue.png)
+</script></section><section  data-markdown><script type="text/template">
+# Comprobando issues: un *hook* 
+
+```perl
+use Path::Tiny;
+
+my $msg_file = shift;
+my $msg = path($msg_file)->slurp;
+my @issues = ($msg =~ /\#(\d+)/g);
+exit(1) if (!@issues );
+my $repo_uri = `git config --get remote.origin.url`; # ← URL del repo
+my ($user,$repo) = ($repo_uri =~ /(\w+)\/([^.]+)/);
+for my $i (@issues) {
+  my $issue = `wget -q -O - https://github.com/$user/$repo/issues/$i`;
+  unless ($issue) {
+    say "✘ Commit incorrecto, issue #$i no existe";
+    exit(1);                                         # ← Sale si no cumple
+  }
+}
+```
+
+```notes
+Algunos plugins como GitHub updater permiten crear hooks directamente
+desde él:
+https://medium.com/@limikael/continuous-integration-for-wordpress-d152ec4852e5. Lo
+que ocurre es que sólo va a afectar a lo que se desarrolle dentro del
+mismo WP, y no a otras cosas auxiliares como lo que se haga en Trellis
+```
+</script></section><section  data-markdown><script type="text/template">export default Split
+
+![Corrigiendo con piedra encima](img/amend.png)
+
+# Corrigiendo
+
+```bash
+git commit --amend
+```
+</script></section><section  data-markdown><script type="text/template">export default Split
+
+![Grabando](https://farm5.staticflickr.com/4837/30971819987_26da5b9af7_k_d.jpg)
+
+# Sucede a menudo
+
+```bash
+git config --global alias.jo 'commit --amend'
+git jo
+```</script></section><section  data-markdown><script type="text/template">
+# Recordando todo: 
+
+`~/.gitconfig`
+
+```ini
+[user]
+	email = jjmerelo@gmail.com
+	name = JJ Merelo
+[push]
+	default = matching
+[core]
+	editor = emacs
+[rerere]
+	enabled = true
+[alias]
+	jo = commit --amend
+```
+</script></section><section  data-markdown><script type="text/template">export default SplitRight
+
+![Busca la camiseta del Madrid](https://farm5.staticflickr.com/4871/44990427415_2827512257_h_d.jpg)
+
+# Busca y encontrarás
+
+```bash
+git grep password
+```
+
+```notes
+Aparece en demasiado sitios, así que habrá que ocultarlo. Una gestión
+segura de API keys y passwords incluye usar de forma hábil el
+.gitignore
+```
+</script></section><section  data-markdown><script type="text/template"># `.gitignore` para la seguridad
+
+```bash
+cp trellis/.gitignore . # Directorio "root" del repo
+```
+</script></section><section  data-markdown><script type="text/template">
+<CodeSurfer
+  title=".gitignore siempre presente"
+  code={require("!raw-loader!examples/gitignore")}
+  lang="bash"
+  showNumbers={true}
+  dark={true}
+  steps={[
+    { lines: [1], notes: "Clave para el vault de Ansible" },
+    { lines: [3], notes: "Otras claves locales" }
+  ]} />
+
+```notes
+En .vault_pass estarán todas las claves que te servirán para descifrar
+las claves cifradas que uses en Ansible y demás:
+https://roots.io/trellis/docs/vault/
+```
+</script></section><section  data-markdown><script type="text/template"># O trabajando con `composer`
+
+```bash
+# Ignore wp-config.php and .htaccess
+wp-config.php
+.htaccess
+
+# Ignore the wp-content directory
+/wp-content
+```
+
+```notes
+Composer es otra alternativa para trabajar con git, y en esta serie de
+artículos: https://deliciousbrains.com/storing-wordpress-in-git/
+explican como usarlo. Permite trabajar con las dependencias y usar la
+línea de órdenes de WP para gestionarlo todo.
+```
+</script></section><section  data-markdown><script type="text/template"># Integrando continuamente
+
+```yaml
+language: php
+php:
+  - 7.2
+  - 7.1
+env:
+  - WP_VERSION=latest
+before_script:
+  - composer self-update
+  - composer install -o --prefer-dist --no-interaction
+  - bash tests/bin/install-wp.sh $WP_VERSION
+script: vendor/bin/phpunit
+```
+
+```notes
+CI de https://carlalexander.ca/continuous-integration-wordpress/
+Otros servicios como Buddy ya integran la prueba de WordPress:
+https://buddy.works/guides/how-introduce-continuous-deployment-to-wordpress 
+
+```
+</script></section><section  data-markdown><script type="text/template">
+# ¿Cómo fluirá `git`?
+
+![Fluyendo el Danubio no azul](https://farm9.staticflickr.com/8252/29175359022_a09f2d8a08_k_d.jpg)
+
+```notes
+Hay muchos patrones de trabajo de git soportados, en algunos casos,
+por herramientas diversas
+https://www.codingblocks.net/podcast/comparing-git-workflows/
+
+También este:
+https://www.atlassian.com/git/tutorials/comparing-workflows
+En general, manteniendo una serie de tareas claras se evitan los
+conflictos y usando integración continua se evitan errores. 
+```
+</script></section><section  data-markdown><script type="text/template"># Trabajando con sub-árboles
+
+<Appear>
+<li>Cuando quieres integrar cambios de varios <em>repos</em> en el tuyo</li>
+<li>Trellis, Bedrock y Sage, por ejemplo</li>
+</Appear>
+
+```notes
+Vamos a tirar directamente de este artículo, que es viejuno pero
+interesante
+http://www.chrisknightindustries.com/2015/24/11/git-subtrees-for-trellis-workflow.html
+```</script></section><section  data-markdown><script type="text/template">
+# Crea repositorio 
+
+## Un subdirectorio por subárbol
+
+![Contenedores](https://farm5.staticflickr.com/4851/30972649047_4b9ef58aa4_k_d.jpg)
+</script></section><section  data-markdown><script type="text/template"><CodeSurfer
+  title="Creando sub-árboles"
+  code={require("!raw-loader!examples/trellis-subtree.sh")}
+  lang="bash"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { lines: [1], notes: "Añade remote para rama y hace fetch" },
+    { lines: [2], notes: "Fetch+checkout == pull. Aquí lo separamos" },
+    { lines: [3], notes: "Pasa a rama master" },
+    { lines: [4], notes: "Convierte rama en un subárbol" }
+  ]} />
+
+```notes
+Recordando lo que dijimos al principio, los árboles son unos de los
+objetos que se usan en git. En este caso, estamos leyendo en un árbol
+cuyo prefijo va a ser el nombre del directorio que hemos creado una
+rama
+```
+</script></section><section  data-markdown><script type="text/template"><CodeSurfer
+  title="Actualizando sub-árboles"
+  code={require("!raw-loader!examples/actualiza-trellis.sh")}
+  lang="bash"
+  showNumbers={true}
+  dark={false}
+  steps={[
+    { lines: [1], notes: "Cambia a la rama" },
+    { lines: [4], notes: "-X acepta siempre original, --squash crea un solo commit" },
+    { lines: [4], notes: "Con esto salta el editor y puedes ver todos los commits incorporados" },
+  ]} />
+
+```notes
+El subárbol es sólo un mapeo de una rama, por lo que siempre que
+actualicemos tenemos que hacerlo trabajando sobre esa rama.
+```
+</script></section><section  data-markdown><script type="text/template">![War by Edwin Starr](https://upload.wikimedia.org/wikipedia/en/1/19/Edwin-starr-war-single-1970.jpg)
+# **¡Git!** ¡Push!
+## ¿Para qué sirve?
+# Absolutamente **para todo**
+</script></section><section  data-markdown><script type="text/template">
+# Muchas gracias
+
+![¿Preguntas?](https://farm5.staticflickr.com/4815/44999068245_6ba7197c31_z_d.jpg)
+
+[`@jjmerelo`](https://twitter.com/jjmerelo)
+| [Canal YouTube](https://youtube.com/jjmerelo) | [`JJ` en GitHub](https://github.com/JJ)
+</script></section></div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
